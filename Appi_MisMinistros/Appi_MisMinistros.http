@@ -1,0 +1,6 @@
+@Appi_MisMinistros_HostAddress = http://localhost:5204
+
+# # GET {{Appi_MisMinistros_HostAddress}}/weatherforecast/
+# # Accept: application/json
+
+# # ###

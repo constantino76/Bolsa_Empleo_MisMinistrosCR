@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMisMinistros", "WebMisMinistros\WebMisMinistros.csproj", "{DB2E1989-6362-44A0-8452-446F890F0CCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appi_MisMinistros", "Appi_MisMinistros\Appi_MisMinistros.csproj", "{CDA67365-DB00-4774-9756-24DC0332939D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2E1989-6362-44A0-8452-446F890F0CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2E1989-6362-44A0-8452-446F890F0CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2E1989-6362-44A0-8452-446F890F0CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2E1989-6362-44A0-8452-446F890F0CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA67365-DB00-4774-9756-24DC0332939D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA67365-DB00-4774-9756-24DC0332939D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA67365-DB00-4774-9756-24DC0332939D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA67365-DB00-4774-9756-24DC0332939D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19152AFC-810D-4D89-926C-ACDA5A34AF64}
+	EndGlobalSection
+EndGlobal

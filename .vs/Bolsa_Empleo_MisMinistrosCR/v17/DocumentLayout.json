@@ -1,0 +1,490 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\repositorio\\implementacion\\jwtokenrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\repositorio\\implementacion\\jwtokenrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\repositorio\\implementacion\\loginrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\repositorio\\implementacion\\loginrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\repositorios\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\repositorios\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\models\\login_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\models\\login_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\repositorios\\interfaces\\ilogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\repositorios\\interfaces\\ilogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\repositorio\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\repositorio\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\repositorio\\implementacion\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\repositorio\\implementacion\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\repositorio\\implementacion\\rolrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\repositorio\\implementacion\\rolrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\appi_misministros\\migrations\\20250703200625_migracioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA67365-DB00-4774-9756-24DC0332939D}|Appi_MisMinistros\\Appi_MisMinistros.csproj|solutionrelative:appi_misministros\\migrations\\20250703200625_migracioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\models\\usuariorol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\models\\usuariorol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\models\\viewmodel\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\models\\viewmodel\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\views\\home\\crearusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\views\\home\\crearusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|c:\\cursosweb\\bolsa_empleo_misministroscr\\webmisministros\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB2E1989-6362-44A0-8452-446F890F0CCC}|WebMisMinistros\\WebMisMinistros.csproj|solutionrelative:webmisministros\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Controllers\\UsuariosController.cs*",
+              "RelativeToolTip": "Appi_MisMinistros\\Controllers\\UsuariosController.cs*",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T14:56:52.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwTokenRepositorio.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\JwTokenRepositorio.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Repositorio\\Implementacion\\JwTokenRepositorio.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\JwTokenRepositorio.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Repositorio\\Implementacion\\JwTokenRepositorio.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAADUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T12:02:58.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Program.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Program.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Program.cs",
+              "RelativeToolTip": "WebMisMinistros\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:53:38.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccesoController.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Controllers\\AccesoController.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Controllers\\AccesoController.cs*",
+              "RelativeToolTip": "Appi_MisMinistros\\Controllers\\AccesoController.cs*",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAEMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:38:57.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccesoController.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Controllers\\AccesoController.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Controllers\\AccesoController.cs",
+              "RelativeToolTip": "WebMisMinistros\\Controllers\\AccesoController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T01:04:04.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Acceso\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Views\\Acceso\\Login.cshtml",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Acceso\\Login.cshtml",
+              "RelativeToolTip": "WebMisMinistros\\Views\\Acceso\\Login.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewBwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T17:56:43.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRepositorio.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\LoginRepositorio.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Repositorio\\Implementacion\\LoginRepositorio.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\LoginRepositorio.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Repositorio\\Implementacion\\LoginRepositorio.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:40:39.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Program.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Program.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Program.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Program.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAAAoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:38:20.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Repositorios\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Repositorios\\Services\\LoginService.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Repositorios\\Services\\LoginService.cs*",
+              "RelativeToolTip": "WebMisMinistros\\Repositorios\\Services\\LoginService.cs*",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:57:42.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Models\\Login.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Login.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Models\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T11:39:47.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Appi_MisMinistros\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-08T02:06:16.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login_.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\Login_.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Models\\Login_.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\Login_.cs",
+              "RelativeToolTip": "WebMisMinistros\\Models\\Login_.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T11:40:18.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ILogin.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Repositorios\\Interfaces\\ILogin.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Repositorios\\Interfaces\\ILogin.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Repositorios\\Interfaces\\ILogin.cs",
+              "RelativeToolTip": "WebMisMinistros\\Repositorios\\Interfaces\\ILogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T13:07:02.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Models\\Usuario.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Usuario.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:54:39.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Rol.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Models\\Rol.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Models\\Rol.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Models\\Rol.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T12:45:18.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUsuario.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Interfaces\\IUsuario.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Repositorio\\Interfaces\\IUsuario.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Interfaces\\IUsuario.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Repositorio\\Interfaces\\IUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T18:53:53.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\UsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Repositorio\\Implementacion\\UsuarioRepositorio.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\UsuarioRepositorio.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Repositorio\\Implementacion\\UsuarioRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T18:54:23.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RolRepositorio.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\RolRepositorio.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Repositorio\\Implementacion\\RolRepositorio.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Repositorio\\Implementacion\\RolRepositorio.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Repositorio\\Implementacion\\RolRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T18:55:09.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250703200625_migracioninicial.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Migrations\\20250703200625_migracioninicial.cs",
+              "RelativeDocumentMoniker": "Appi_MisMinistros\\Migrations\\20250703200625_migracioninicial.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\Appi_MisMinistros\\Migrations\\20250703200625_migracioninicial.cs",
+              "RelativeToolTip": "Appi_MisMinistros\\Migrations\\20250703200625_migracioninicial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T20:06:25.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UsuarioViewModel.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\ViewModel\\UsuarioViewModel.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Models\\ViewModel\\UsuarioViewModel.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\ViewModel\\UsuarioViewModel.cs",
+              "RelativeToolTip": "WebMisMinistros\\Models\\ViewModel\\UsuarioViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T12:35:15.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UsuarioRol.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\UsuarioRol.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Models\\UsuarioRol.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\UsuarioRol.cs",
+              "RelativeToolTip": "WebMisMinistros\\Models\\UsuarioRol.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T12:09:49.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebMisMinistros\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwBIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-28T14:50:48.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebMisMinistros\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T12:08:13.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Models\\Usuario.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\Usuario.cs",
+              "RelativeToolTip": "WebMisMinistros\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAYAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T12:06:36.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "WebMisMinistros\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T12:06:20.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CrearUsuario.cshtml",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Home\\CrearUsuario.cshtml",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Views\\Home\\CrearUsuario.cshtml",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Home\\CrearUsuario.cshtml",
+              "RelativeToolTip": "WebMisMinistros\\Views\\Home\\CrearUsuario.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAIBJwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T12:13:28.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebMisMinistros\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\CursosWeb\\Bolsa_Empleo_MisMinistrosCR\\WebMisMinistros\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebMisMinistros\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T15:14:29.013Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
