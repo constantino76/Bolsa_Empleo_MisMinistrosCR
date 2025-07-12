@@ -14,6 +14,7 @@ namespace WebMisMinistros.Models.ViewModel
         public string SegundoApellido { get; set; }
       
         public string Correo { get; set; }
-        public List<Rol> Roles { get; set; }
+        public string Clave { get; set; }
+        public ICollection<Rol> Roles { get; set; }
     }
 }

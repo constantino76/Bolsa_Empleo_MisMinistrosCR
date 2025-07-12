@@ -17,7 +17,7 @@ namespace WebMisMinistros.Models
         [Required]
         public string Correo { get; set; }
         public string Clave { get; set; }
-        public ICollection<UsuarioRol> UsuarioRoles { get; set; }
+        public ICollection<UsuarioRol>? UsuarioRoles { get; set; }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿@model WebMisMinistros.Models.Usuario
+﻿@model WebMisMinistros.Models.ViewModel.UsuarioViewModel;
 
 @{
     ViewData["Title"] = "CrearUsuario";
@@ -40,6 +40,34 @@
                             <input asp-for="SegundoApellido" class="form-control" />
                             <span asp-validation-for="SegundoApellido" class="text-danger"></span>
                         </div>
+
+
+
+                        <div class="form-group">
+                            <label asp-for="Correo" class="control-label"></label>
+                            <input asp-for="Correo" class="form-control" />
+                            <span asp-validation-for="Correo" class="text-danger"></span>
+
+
+                            <div class="form-group">
+                                <label asp-for="Clave" class="control-label"></label>
+                                <input asp-for="Clave" class="form-control" />
+                                <span asp-validation-for="Clave" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <select  name="IdRol">
+                            <option value="" selected disabled>Selecione un rol</option>
+                            @foreach (var rol in Model.Roles)
+                            
+                            {
+                                
+                            <option value="@rol.IdRol">@rol.RolNombre</option>
+                            
+                            }
+
+                        </select>
+
+
                         <div class="form-group">
                             <input type="submit" value="Create" class="btn btn-primary" />
                         </div>

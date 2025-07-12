@@ -1,31 +1,53 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebMisMinistros.Models;
+using WebMisMinistros.Models.ViewModel;
+using WebMisMinistros.Repositorios.Interfaces;
 
 namespace WebMisMinistros.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUsuario _iusuario;
+        public HomeController(ILogger<HomeController> logger,IUsuario iusuario)
         {
             _logger = logger;
+            _iusuario = iusuario;
         }
 
         public IActionResult Index() {
 
             return View();
-        
-        }
-        public ActionResult CrearUsuario()
-        {
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> CrearUsuario(Usuario usuario) {
 
-            if (usuario != null)
+        }
+        public async Task<IActionResult> CrearUsuario()
+        {
+
+            UsuarioViewModel user = new UsuarioViewModel()
+            {
+
+                Roles = GetRoles()
+
+            };
+            //user.Roles=GetRoles();
+            return View(user);
+
+        }
+        public List<Rol> GetRoles() { 
+        
+        List<Rol> roles = new List<Rol>();
+
+            roles.Add(new Rol() { IdRol=1,RolNombre="Administrador" });
+
+            roles.Add(new Rol() { IdRol = 2, RolNombre = "Developer" });
+            return roles;
+        }
+       
+        [HttpPost]
+        public async Task<IActionResult> CrearUsuario(UsuarioViewModel usuarioviewmodel ,int IdRol ) {
+
+            if (usuarioviewmodel == null)
             {
 
 
@@ -35,9 +57,21 @@ namespace WebMisMinistros.Controllers
             }
 
 
-            try { 
-            
-            
+            try {
+                Usuario usuario = new Usuario() {
+
+                    IdUsuario = usuarioviewmodel.IdUsuario,
+                    Nombre = usuarioviewmodel.Nombre,
+                    PrimerApellido=usuarioviewmodel.PrimerApellido,
+                    SegundoApellido=usuarioviewmodel.SegundoApellido,
+                    Correo=usuarioviewmodel.Correo,
+                    Clave=usuarioviewmodel.Clave
+                
+                };
+
+               string token= HttpContext.Session.GetString("jwtk");
+
+              await   _iusuario.crearUsuario(usuario, token);
             }
             catch { 
             }

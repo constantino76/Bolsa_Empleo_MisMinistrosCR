@@ -6,19 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Appi_MisMinistros.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccesoController : ControllerBase
     {
         // GET: AccesoController
 
-
+        //private readonly IUsuario _iusuario;
         private readonly Ilogin _ilogin;
         private readonly IjwToken _jwtoken; 
-        public AccesoController(Ilogin ilogin,IjwToken ijwToken)
+        public AccesoController(Ilogin ilogin,IjwToken ijwToken,IUsuario iusuario)
         {
             _ilogin = ilogin;
             _jwtoken = ijwToken;
+           // _iusuario = iusuario;
         }
 
 
@@ -73,20 +75,34 @@ namespace Appi_MisMinistros.Controllers
             });
 
         }
+        //[HttpPost("registerUser")]
+        //[Authorize(Roles = "Administrador")]
+        //public async Task<ActionResult> InsertarUsuario([FromBody] Usuario usuario)
+        //{ // validamos el modelo
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
 
-            // GET: AccesoController/Details/5
+
+
+        //    }
+
+        //    _iusuario.InsertarUsuario(usuario);
+        //    return Ok("Registro Agregado");
+        //}
+        // GET: AccesoController/Details/5
         //    public ActionResult Logout(int id)
         //{
         //    return Ok();
         //}
 
-        
+
 
         // POST: AccesoController/Create
-        
 
-       
 
-       
+
+
+
     }
 }

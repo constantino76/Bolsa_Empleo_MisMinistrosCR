@@ -114,22 +114,18 @@
   },
   {
     "ContainingType": "Appi_MisMinistros.Controllers.UsuariosController",
-    "Method": "ObtenerUsuarios",
-    "RelativePath": "api/Usuarios/GetAll",
-    "HttpMethod": "GET",
+    "Method": "InsertarUsuario",
+    "RelativePath": "api/Usuarios/registerUser",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "usuario",
+        "Type": "Appi_MisMinistros.Models.Usuario",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   }
 ]

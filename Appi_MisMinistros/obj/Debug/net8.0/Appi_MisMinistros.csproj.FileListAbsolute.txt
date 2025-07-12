@@ -121,6 +121,7 @@ C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\Appi
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\Appi_MisMinistros.csproj.CoreCompileInputs.cache
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\Appi_MisMinistros.MvcApplicationPartsAssemblyInfo.cs
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\Appi_MisMinistros.MvcApplicationPartsAssemblyInfo.cache
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\Appi_MisMinistros.sourcelink.json
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\staticwebassets.build.json
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\staticwebassets.development.json
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\Appi_MisMinistros\obj\Debug\net8.0\staticwebassets\msbuild.Appi_MisMinistros.Microsoft.AspNetCore.StaticWebAssets.props

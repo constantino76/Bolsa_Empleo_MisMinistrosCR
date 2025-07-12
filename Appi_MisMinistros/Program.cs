@@ -19,13 +19,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<Ilogin,LoginRepositorio>();
 
 builder.Services.AddScoped<IjwToken,JwTokenRepositorio>();
+builder.Services.AddScoped<IUsuario, UsuarioRepositorio>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                       .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
                       .AddEnvironmentVariables();
-
+//obtenemos las audiencias 
+//var audiencias = builder.Configuration.GetSection("jwt:Audiences").Get<string[]>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -33,7 +35,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 
-   
+    
 
         .AddJwtBearer(options =>
         {

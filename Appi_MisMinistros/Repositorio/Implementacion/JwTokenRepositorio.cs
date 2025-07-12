@@ -2,6 +2,7 @@
 using Appi_MisMinistros.Repositorio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -24,8 +25,19 @@ namespace Appi_MisMinistros.Repositorio.Implementacion
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:SecretKey"]!));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+           
+            //var audiencias = _config.GetSection("Jwt:Audiences").Get<string[]>()
+            //    ??Array.Empty<string>();
 
+            //if (audiencias.Length == 0)
+            //{
+            //    throw new InvalidOperationException(
+            //        "No se han configurado 'Jwt:Audiences' en appsettings.json"
+            //    );
+            //}
 
+          
+            //var audienciaemitir = audiencias[0];
             var userClaims = new List<Claim>
         {
     new Claim(ClaimTypes.NameIdentifier, user.IdUsuario.ToString()),
@@ -35,7 +47,7 @@ namespace Appi_MisMinistros.Repositorio.Implementacion
 
 
    foreach (var rol in user.UsuarioRoles) {
-                new Claim(ClaimTypes.Role, rol.Rol.RolNombre);
+              userClaims.Add(  new Claim(ClaimTypes.Role, rol.Rol.RolNombre));
             }
 
 
