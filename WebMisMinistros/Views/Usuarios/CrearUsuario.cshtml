@@ -5,20 +5,16 @@
 
 }
 
-<h1>CrearUsuario</h1>
-
-<h4>Usuario</h4>
-<hr />
 
 <div class="container container-fluid">
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
         <div class=" col-12 col-md-6">
             <div class="card shadow-lg border-0">
+                <h2 class="card-header text-success text-center bg-black">Registrar Usuario</h2>
 
-
-                <div class="card-body">
-                    <form asp-action="CrearUsuario" method="post" asp-controller="Home">
+                <div class="card-body shadow-lg border-0">
+                    <form asp-action="CrearUsuario" method="post" asp-controller="Usuarios">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group">
                             <label asp-for="IdUsuario" class="control-label"></label>
@@ -67,10 +63,21 @@
 
                         </select>
 
+                        <div class="row justify-content-center mt-2">
 
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <div class="col-12 col-md-6">
+
+
+                                <div class="form-group">
+                                    <input type="submit" value="Create" class="btn  btn-success" />
+                                </div>
+
+                            </div>
+
+
+
                         </div>
+                        
                     </form>
 
 
@@ -98,7 +105,7 @@
     body{
        
           cursor:pointer;
-        background-color: gray}
+        background-color:black}
 
 
 </style>

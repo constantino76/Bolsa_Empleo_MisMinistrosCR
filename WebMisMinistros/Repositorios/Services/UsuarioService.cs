@@ -32,11 +32,12 @@ namespace WebMisMinistros.Repositorios.implementacion
                     var problemJson = await response.Content.ReadAsStringAsync();
 
                     // Opcional: imprímelo en consola o lanza una excepción con ese texto
-                    Console.WriteLine("Error 400, ProblemDetails de la API:");
+                    Console.WriteLine("Error 400, problemas en el modelo de datos :");
                     Console.WriteLine(problemJson);
 
                     throw new Exception($"BadRequest: {problemJson}");
                 }
+                if (response.StatusCode==HttpStatusCode.Forbidden) { }
             }
                 if (usuario == null) return false;
 

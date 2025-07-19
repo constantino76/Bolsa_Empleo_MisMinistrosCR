@@ -6,11 +6,11 @@ using WebMisMinistros.Repositorios.Interfaces;
 
 namespace WebMisMinistros.Controllers
 {
-    public class HomeController : Controller
+    public class UsuariosController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<UsuariosController> _logger;
         private readonly IUsuario _iusuario;
-        public HomeController(ILogger<HomeController> logger,IUsuario iusuario)
+        public UsuariosController(ILogger<UsuariosController> logger,IUsuario iusuario)
         {
             _logger = logger;
             _iusuario = iusuario;
@@ -75,7 +75,7 @@ namespace WebMisMinistros.Controllers
             }
             catch { 
             }
-            return View();
+            return  RedirectToAction("CrearUsuario");
         
         }
 

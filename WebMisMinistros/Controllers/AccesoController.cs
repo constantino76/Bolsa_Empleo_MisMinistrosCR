@@ -13,18 +13,21 @@ namespace WebMisMinistros.Controllers
         private readonly IUsuario _iusuario;
 
         private readonly ILogin _ilogin;
+        private readonly IJwtokenReader _jwtokenReader; 
         // GET: AccesoController
-        public AccesoController(IUsuario iusuario, ILogin ilogin) { 
+        public AccesoController(IUsuario iusuario, ILogin ilogin, IJwtokenReader jwtokenReader) { 
         
         _iusuario = iusuario;
 
             _ilogin = ilogin;
-        
+            _jwtokenReader=jwtokenReader;   
+
+
         }
 
 
 
-        [AllowAnonymous]
+       
 
         public async Task<ActionResult> Login() {
             return View();
@@ -49,8 +52,16 @@ namespace WebMisMinistros.Controllers
                 // recibe el objeto token
                var jwtk=await  _ilogin.Login(user);
                 if(jwtk!=null)
-                HttpContext.Session.SetString("jwtk", jwtk.token);
-                
+               HttpContext.Session.SetString("jwtk", jwtk.token);
+                var jwtkdata = HttpContext.Session.GetString("jwtk");
+
+                if (jwtkdata!=null)
+                {
+                    _jwtokenReader.LeerJwtoken(jwtkdata);
+                }
+              
+
+
                 }
             
              catch {
@@ -59,7 +70,7 @@ namespace WebMisMinistros.Controllers
             }
         
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("CrearUsuario", "Usuarios");
         }
 
         // GET: AccesoController/Create

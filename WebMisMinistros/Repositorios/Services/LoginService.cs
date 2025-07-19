@@ -31,7 +31,7 @@ namespace WebMisMinistros.Repositorios.implementacion
             var content=new StringContent(json,Encoding.UTF8,"application/json") ;
              var response= await  httpClient.PostAsync(url,content) ;
 
-
+                //deserializamos el toquen
                 if (response.IsSuccessStatusCode) { 
                    var jsondata=await response.Content.ReadAsStringAsync() ;
                     var jsonobject =JsonConvert.DeserializeObject<JwTokenResponse>(jsondata) ;
@@ -39,13 +39,13 @@ namespace WebMisMinistros.Repositorios.implementacion
                     if (jsonobject != null) return jsonobject;
 
                 }
-                //controlar el mensaje de error 
+                //manejamos los diferentes  errores 
                 if (response.StatusCode == HttpStatusCode.BadRequest)
                 {
-                    // Lee el cuerpo completo del problema (ProblemDetails) que envía ASP.NET Core
+                    // Lee el cuerpo completo del problema (ProblemDetails) que envía ASP.NET Core y asi saber que hacer
                     var problemJson = await response.Content.ReadAsStringAsync();
 
-                    // Opcional: imprímelo en consola o lanza una excepción con ese texto
+                    // adicionalmente imprimimos el error 
                     Console.WriteLine("Error 400, ProblemDetails de la API:");
                     Console.WriteLine(problemJson);
 

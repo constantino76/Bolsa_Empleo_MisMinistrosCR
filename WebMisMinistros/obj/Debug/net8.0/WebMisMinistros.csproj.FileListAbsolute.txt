@@ -26,6 +26,10 @@ C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Micros
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -55,6 +59,7 @@ C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\CursosWeb\Bolsa_Empleo_MisMinistrosCR\WebMisMinistros\bin\Debug\net8.0\System.Security.Permissions.dll

@@ -1,20 +1,25 @@
 using WebMisMinistros.Repositorios.implementacion;
 using WebMisMinistros.Repositorios.Interfaces;
+using WebMisMinistros.Repositorios.Services;
+using WebMisMinistros.ManejadorRutas;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<FilterTokenView>();
+});
 builder.Services.AddScoped<IUsuario,UsuarioService>();
 builder.Services.AddScoped<ILogin, LoginService>();
-
-
+builder.Services.AddScoped<IJwtokenReader,JwtokenReaderService>();
+builder.Services.AddScoped<IRol, RolService>();
 
 //configuracion de jwt
 builder.Services.AddSession();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Duración de la sesión inactiva
+    options.IdleTimeout = TimeSpan.FromMinutes(25); // Duración de la sesión inactiva
     options.Cookie.HttpOnly = true; // Seguridad básica
     options.Cookie.IsEssential = true; // Necesario para funcionar sin consentimiento de cookies
 });
@@ -33,8 +38,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+app.UseSession();
 app.UseRouting();
-app.UseSession();   
+
+
+
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
