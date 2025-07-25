@@ -17,9 +17,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionPorDefecto")));
 //inyeccion del servicio de Login
 builder.Services.AddScoped<Ilogin,LoginRepositorio>();
-
-builder.Services.AddScoped<IjwToken,JwTokenRepositorio>();
 builder.Services.AddScoped<IUsuario, UsuarioRepositorio>();
+builder.Services.AddScoped<IjwToken,JwTokenRepositorio>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

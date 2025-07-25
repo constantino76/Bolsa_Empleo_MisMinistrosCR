@@ -1,0 +1,58 @@
+# Errores y Soluciones
+
+## 🛠️ Error: `ObjectDisposedException` al usar `DbContext`
+
+### 🧩 Descripción del problema:
+Durante la ejecución de un método que utilizaba Entity Framework Core (`_context.SaveChangesAsync()`), la aplicación interrumpía
+ el flujo silenciosamente sin mostrar errores.  Al implementar un bloque `try-catch` global para capturar cualquier excepción, 
+se detectó el siguiente error:
+
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'AppDbContext'.
+
+
+### 🧪 Causa identificada:
+La excepción ocurrió porque los métodos asincrónicos del repositorio no estaban siendo esperados
+ correctamente (`await`). Esto provocaba que el `DbContext` se destruyera (disposed) antes de que
+ finalizara la operación, especialmente al trabajar con inyección de dependencias y ciclos de vida `Scoped`.
+
+
+### ✅ Solución aplicada:
+Se revisó toda la cadena de llamadas, asegurándose de lo siguiente:
+
+- Todos los métodos que retornan `Task` o `Task<T>` se marcan con `async` y usan `await`.
+- Las llamadas a métodos asincrónicos en controladores y servicios también se marcan con `await`.
+- Se mantiene el `DbContext` con `ServiceLifetime.Scoped` (valor recomendado por defecto).
+
+### 🔧 Ejemplo corregido:
+
+**En el repositorio:**
+```csharp
+public async Task InsertarUsuario(Usuario user)
+{
+    await _context.Tb_Usuarios.AddAsync(user);
+    await _context.SaveChangesAsync();
+}
+
+
+ En el controlador
+[HttpPost]
+public async Task<IActionResult> CrearUsuario(UsuarioDTO dto)
+{
+    var usuario = new Usuario { ... };
+    await _iusuario.InsertarUsuario(usuario); // <- uso correcto de await
+    return Ok();
+}
+
+
+
+Buenas prácticas recordadas:
+No usar async void; siempre retornar Task.
+
+Usar await en cada operación asincrónica.
+
+No compartir el mismo DbContext entre múltiples hilos.
+
+Utilizar el ciclo de vida Scoped para DbContext en Startup.cs o Program.cs:
+
+

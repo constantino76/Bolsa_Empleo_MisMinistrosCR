@@ -16,9 +16,9 @@ namespace Appi_MisMinistros.Controllers
         private readonly IUsuario _iusuario;
 
 
-        public UsuariosController(IUsuario usuario) {
+        public UsuariosController(IUsuario iusuario) {
 
-            _iusuario = usuario;
+            _iusuario = iusuario;
         
         }
         // GET: api/<UsuariosController>
@@ -34,8 +34,21 @@ namespace Appi_MisMinistros.Controllers
             
             }
 
-            _iusuario.InsertarUsuario(usuario); 
+            await _iusuario.InsertarUsuario(usuario); 
             return Ok("Registro Agregado");
+        }
+
+        [HttpPost("AbrirCuentaUsuario")]
+        [AllowAnonymous]
+        public async Task<ActionResult> AbrirNuevaCuenta([FromBody] Usuario nuevoregistro) {
+
+            if (!ModelState.IsValid) {
+
+                return BadRequest(ModelState);
+            }
+            await _iusuario.InsertarUsuario(nuevoregistro);
+          return Ok("Registro Agregado");
+
         }
 
         // GET api/<UsuariosController>/5

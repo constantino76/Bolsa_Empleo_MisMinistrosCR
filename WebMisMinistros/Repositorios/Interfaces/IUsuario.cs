@@ -6,6 +6,7 @@ namespace WebMisMinistros.Repositorios.Interfaces
     {
 
         public Task<bool> crearUsuario(Usuario usuario ,string  token);
+        public Task<bool> CrearNuevoUsuario(Usuario usuario);
         public Task<Usuario> upDateUsuario(Usuario userUpdate, string token);
         public Task<Usuario> BuscarUsuario(String correo, string clave);
     }

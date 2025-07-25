@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Common;
 using System.Diagnostics;
 using WebMisMinistros.Models;
 using WebMisMinistros.Models.ViewModel;
@@ -45,7 +46,9 @@ namespace WebMisMinistros.Controllers
         }
        
         [HttpPost]
-        public async Task<IActionResult> CrearUsuario(UsuarioViewModel usuarioviewmodel ,int IdRol ) {
+        public async Task<IActionResult> CrearUsuario([FromBody]UsuarioViewModel usuarioviewmodel ,int IdRol ) {
+
+            string token = HttpContext.Session.GetString("jwtk");
 
             if (usuarioviewmodel == null)
             {
@@ -69,20 +72,51 @@ namespace WebMisMinistros.Controllers
                 
                 };
 
-               string token= HttpContext.Session.GetString("jwtk");
+              
 
               await   _iusuario.crearUsuario(usuario, token);
             }
-            catch { 
+            catch(Exception ex) {
+
+                Console.WriteLine("Ha ocurrido un error tipo :",ex.ToString()) ;
             }
             return  RedirectToAction("CrearUsuario");
         
         }
 
-        public IActionResult Privacy()
-        {
+
+        public async Task<ActionResult> CrearNuevaCuenta() {
+
+     
+            
             return View();
+
         }
+
+        [HttpPost]
+
+        public async Task<ActionResult> CrearNuevaCuenta(UsuarioViewModel usuarioviewmodel)
+        {
+
+
+            Usuario user = new Usuario()
+            {
+
+
+                IdUsuario = usuarioviewmodel.IdUsuario,
+                Nombre = usuarioviewmodel.Nombre,
+                PrimerApellido = usuarioviewmodel.PrimerApellido,
+                SegundoApellido = usuarioviewmodel.SegundoApellido,
+                Correo = usuarioviewmodel.Correo,
+                Clave = usuarioviewmodel.Clave,
+                
+            };
+            await _iusuario.CrearNuevoUsuario(user);
+
+            return  RedirectToAction("CrearNuevaCuenta");
+
+        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

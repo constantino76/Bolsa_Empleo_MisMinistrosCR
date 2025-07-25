@@ -16,8 +16,8 @@ namespace WebMisMinistros.Repositorios.Services
             var Jsontoken = tokens as JwtSecurityToken;// lo casteamos a un objeto JwtSecurityToken
 
             // leemos los claims 
-            ObtenerRol( Jsontoken);
-            return "";
+            var rol = ObtenerRol( Jsontoken);
+            return rol;
         }
 
         public string ObtenerRol(JwtSecurityToken jsontoken) {

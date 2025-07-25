@@ -114,6 +114,22 @@
   },
   {
     "ContainingType": "Appi_MisMinistros.Controllers.UsuariosController",
+    "Method": "AbrirNuevaCuenta",
+    "RelativePath": "api/Usuarios/AbrirCuentaUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoregistro",
+        "Type": "Appi_MisMinistros.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Appi_MisMinistros.Controllers.UsuariosController",
     "Method": "InsertarUsuario",
     "RelativePath": "api/Usuarios/registerUser",
     "HttpMethod": "POST",

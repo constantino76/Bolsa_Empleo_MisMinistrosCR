@@ -57,7 +57,9 @@ namespace WebMisMinistros.Controllers
 
                 if (jwtkdata!=null)
                 {
-                    _jwtokenReader.LeerJwtoken(jwtkdata);
+                    string rol = _jwtokenReader.LeerJwtoken(jwtkdata);
+
+                    HttpContext.Session.SetString("rol", rol);
                 }
               
 
@@ -70,34 +72,20 @@ namespace WebMisMinistros.Controllers
             }
         
 
-            return RedirectToAction("CrearUsuario", "Usuarios");
+            return RedirectToAction("Dasboard", "Home");
         }
 
-        // GET: AccesoController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+       
+       
 
-        // POST: AccesoController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        // funcionalidad para cerrar sesion 
+        public IActionResult Logout() {
 
-        // GET: AccesoController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
+
+            HttpContext.Session.Remove("jwtk");
+            HttpContext.Session.Remove("rol");
+            return RedirectToAction("Login", "Acceso");
+
         }
 
         // POST: AccesoController/Edit/5

@@ -16,20 +16,30 @@ namespace Appi_MisMinistros.Repositorio.Implementacion
             try
             {
                 await _context.Tb_Usuarios.AddAsync(user);
-                filasafectadas = await _context.SaveChangesAsync();
+               await _context.SaveChangesAsync();
 
                 return true;
             }
-            catch (DbUpdateException ex ) {
+
+            
+            catch (DbUpdateException ex) {
 
                 Console.WriteLine("No se logro agregar el registro en la base de datos");
                 return false;
             }
 
 
+            catch (Exception ex)
+            {
+                Console.WriteLine("la ecepcion es", ex.ToString());
+
+
+            }
+            return true;
+
             //if (filasafectadas == 0) return false;
 
-            
+
         }
     }
 }
