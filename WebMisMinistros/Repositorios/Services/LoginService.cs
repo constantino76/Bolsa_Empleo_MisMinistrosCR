@@ -15,26 +15,29 @@ namespace WebMisMinistros.Repositorios.implementacion
     {   //recordar debe terminar con barra inclinada al final de la url para que trabaje 
         private const string url = "https://localhost:7178/api/Acceso/auth/login/";
         public async Task<JwTokenResponse> Login(Login_ user)
-        {  
+        {
 
-           
-            if (user == null) {
-               
-                return null  ;
-            
+
+            if (user == null)
+            {
+
+                return null;
+
             }
 
-            string json = JsonConvert.SerializeObject(user) ;
+            string json = JsonConvert.SerializeObject(user);
 
-            using (var httpClient = new HttpClient()) { 
-            
-            var content=new StringContent(json,Encoding.UTF8,"application/json") ;
-             var response= await  httpClient.PostAsync(url,content) ;
+            using (var httpClient = new HttpClient())
+            {
+
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await httpClient.PostAsync(url, content);
 
                 //deserializamos el toquen
-                if (response.IsSuccessStatusCode) { 
-                   var jsondata=await response.Content.ReadAsStringAsync() ;
-                    var jsonobject =JsonConvert.DeserializeObject<JwTokenResponse>(jsondata) ;
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsondata = await response.Content.ReadAsStringAsync();
+                    var jsonobject = JsonConvert.DeserializeObject<JwTokenResponse>(jsondata);
 
                     if (jsonobject != null) return jsonobject;
 

@@ -20,7 +20,7 @@
 </head>
 <body>
     @{
-       var rol = Context.Session.GetString("rol");
+        var rol = Context.Session.GetString("rol");
     }
 
     @if (!string.IsNullOrEmpty(rol))
@@ -37,10 +37,10 @@
         }
 
     }
-     else @if(string.IsNullOrEmpty(rol))
+    else @if (string.IsNullOrEmpty(rol))
     {
-        
-         <partial name="_LayoutCliente"/>
+
+        <partial name="_LayoutCliente" />
 
     }
 
@@ -48,18 +48,19 @@
 
 
 
-    <body class="hold-transition sidebar-mini">
-        <div class="wrapper">
-            @RenderBody()
-            @if (rol != null)
-            
-            {
-                <partial name="_Footer" />
-            
-            }
-           
-        </div>
-    </body>
+
+    <div class="layout-wrapper">
+        @RenderBody()
+        @if (rol != null)
+
+        {
+            int a = 0;
+            <partial name="_Footer" />
+
+        }
+
+    </div>
+
 
 
     <script src="/AdmindLTE/plugins/jquery/jquery.min.js"></script>
@@ -75,3 +76,7 @@
 
 </body>
 </html>
+
+
+
+

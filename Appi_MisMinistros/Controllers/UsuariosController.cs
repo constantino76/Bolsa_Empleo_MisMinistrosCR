@@ -19,37 +19,69 @@ namespace Appi_MisMinistros.Controllers
         public UsuariosController(IUsuario iusuario) {
 
             _iusuario = iusuario;
-        
+
         }
         // GET: api/<UsuariosController>
-       
+
         [HttpPost("registerUser")]
         [Authorize(Roles = "Administrador")]
         public async Task<ActionResult> InsertarUsuario([FromBody] Usuario usuario)
         { // validamos el modelo
             if (!ModelState.IsValid) {
-                return BadRequest(ModelState);
-            
-            
-            
+                return BadRequest(new
+                {
+                    Mensaje = "Error de validación en el modelo.",
+                    Errores = ModelState.Values.SelectMany(v => v.Errors)
+                                        .Select(e => e.ErrorMessage)
+                });
+
+
+
             }
 
-            await _iusuario.InsertarUsuario(usuario); 
-            return Ok("Registro Agregado");
+            await _iusuario.InsertarUsuario(usuario);
+            return Ok(new
+            {
+                Mensaje = "Usuario registrado exitosamente.",
+                Usuario = new
+                {
+                    usuario.Nombre,
+                    usuario.PrimerApellido,
+                    usuario.SegundoApellido,
+                    usuario.Correo,
+                    // o cualquier otro campo relevante
+                }
+            });
         }
 
         [HttpPost("AbrirCuentaUsuario")]
         [AllowAnonymous]
-        public async Task<ActionResult> AbrirNuevaCuenta([FromBody] Usuario nuevoregistro) {
+        public async Task<ActionResult> AbrirNuevaCuenta([FromBody] Usuario usuario) {
 
             if (!ModelState.IsValid) {
 
-                return BadRequest(ModelState);
+                return BadRequest(new
+                {
+                    Mensaje = "Error de validación en el modelo ,no se pudo crear la cuenta",
+                    Errores = ModelState.Values.SelectMany(v => v.Errors)
+                                        .Select(e => e.ErrorMessage)
+                });
             }
-            await _iusuario.InsertarUsuario(nuevoregistro);
-          return Ok("Registro Agregado");
+            await _iusuario.InsertarUsuario(usuario);
+            return Ok(new
+            {
+                Mensaje = "Usuario registrado exitosamente.",
+                Usuario = new
+                {
+                    usuario.Nombre,
+                    usuario.PrimerApellido,
+                    usuario.SegundoApellido,
+                    usuario.Correo,
+                    // o cualquier otro campo relevante
+                }
+            });
 
-        }
+        } 
 
         // GET api/<UsuariosController>/5
         [HttpGet("{id}")]

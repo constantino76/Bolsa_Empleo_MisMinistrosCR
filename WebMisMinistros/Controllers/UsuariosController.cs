@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Common;
 using System.Diagnostics;
@@ -11,13 +12,14 @@ namespace WebMisMinistros.Controllers
     {
         private readonly ILogger<UsuariosController> _logger;
         private readonly IUsuario _iusuario;
-        public UsuariosController(ILogger<UsuariosController> logger,IUsuario iusuario)
+        public UsuariosController(ILogger<UsuariosController> logger, IUsuario iusuario)
         {
             _logger = logger;
             _iusuario = iusuario;
         }
 
-        public IActionResult Index() {
+        public IActionResult Index()
+        {
 
             return View();
 
@@ -35,18 +37,20 @@ namespace WebMisMinistros.Controllers
             return View(user);
 
         }
-        public List<Rol> GetRoles() { 
-        
-        List<Rol> roles = new List<Rol>();
+        public List<Rol> GetRoles()
+        {
 
-            roles.Add(new Rol() { IdRol=1,RolNombre="Administrador" });
+            List<Rol> roles = new List<Rol>();
+
+            roles.Add(new Rol() { IdRol = 1, RolNombre = "Administrador" });
 
             roles.Add(new Rol() { IdRol = 2, RolNombre = "Developer" });
             return roles;
         }
-       
+
         [HttpPost]
-        public async Task<IActionResult> CrearUsuario([FromBody]UsuarioViewModel usuarioviewmodel ,int IdRol ) {
+        public async Task<IActionResult> CrearUsuario([FromBody] UsuarioViewModel usuarioviewmodel, int IdRol)
+        {
 
             string token = HttpContext.Session.GetString("jwtk");
 
@@ -60,35 +64,42 @@ namespace WebMisMinistros.Controllers
             }
 
 
-            try {
-                Usuario usuario = new Usuario() {
+            try
+            {
+                Usuario usuario = new Usuario()
+                {
 
                     IdUsuario = usuarioviewmodel.IdUsuario,
                     Nombre = usuarioviewmodel.Nombre,
-                    PrimerApellido=usuarioviewmodel.PrimerApellido,
-                    SegundoApellido=usuarioviewmodel.SegundoApellido,
-                    Correo=usuarioviewmodel.Correo,
-                    Clave=usuarioviewmodel.Clave
-                
+                    PrimerApellido = usuarioviewmodel.PrimerApellido,
+                    SegundoApellido = usuarioviewmodel.SegundoApellido,
+                    Correo = usuarioviewmodel.Correo,
+                    Clave = usuarioviewmodel.Clave
+
                 };
 
-              
 
-              await   _iusuario.crearUsuario(usuario, token);
-            }
-            catch(Exception ex) {
 
-                Console.WriteLine("Ha ocurrido un error tipo :",ex.ToString()) ;
+        var respuesta =await _iusuario.crearUsuario(usuario, token);
+
+                HttpContext.Session.SetString("Mensaje",respuesta.Mensaje);
+                HttpContext.Session.SetString("CodigoRespuesta", Convert.ToString(respuesta.CodigoRespuesta));
             }
-            return  RedirectToAction("CrearUsuario");
-        
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Ha ocurrido un error tipo :", ex.ToString());
+            }
+            return RedirectToAction("CrearUsuario");
+
         }
 
 
-        public async Task<ActionResult> CrearNuevaCuenta() {
+        public async Task<ActionResult> CrearNuevaCuenta()
+        {
 
-     
-            
+
+
             return View();
 
         }
@@ -96,27 +107,31 @@ namespace WebMisMinistros.Controllers
         [HttpPost]
 
         public async Task<ActionResult> CrearNuevaCuenta(UsuarioViewModel usuarioviewmodel)
-        {
+        { 
 
 
             Usuario user = new Usuario()
             {
-
-
                 IdUsuario = usuarioviewmodel.IdUsuario,
                 Nombre = usuarioviewmodel.Nombre,
                 PrimerApellido = usuarioviewmodel.PrimerApellido,
                 SegundoApellido = usuarioviewmodel.SegundoApellido,
                 Correo = usuarioviewmodel.Correo,
                 Clave = usuarioviewmodel.Clave,
-                
-            };
-            await _iusuario.CrearNuevoUsuario(user);
 
-            return  RedirectToAction("CrearNuevaCuenta");
+            };
+        var respuesta= await _iusuario.CrearNuevoUsuario(user);
+
+
+          
+
+            HttpContext.Session.SetString("Mensaje", respuesta.Mensaje);
+            HttpContext.Session.SetString("CodigoRespuesta", Convert.ToString(respuesta.CodigoRespuesta));
+
+            return RedirectToAction("CrearNuevaCuenta");
 
         }
-        
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

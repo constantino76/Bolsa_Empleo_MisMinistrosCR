@@ -1,19 +1,24 @@
-﻿@model WebMisMinistros.Models.ViewModel.UsuarioViewModel;
+﻿@using Newtonsoft.Json
+@model WebMisMinistros.Models.ViewModel.UsuarioViewModel
 
 @{
     ViewData["Title"] = "CrearUsuario";
-     }
+}
+
+<h1>CrearUsuario</h1>
 
 
-<div class="container container-fluid mt-3">
+<hr />
 
-    <div class="row justify-content-center mt-5">
-        <div class=" col-12 col-md-6">
+<div class="container">
+
+    <div class="row justify-content-center mt-2">
+        <div class="col col-md-6">
             <div class="card shadow-lg border-0">
-                <h2 class="card-header text-secondary text-center">Registrar Usuario</h2>
+                <h2 class="card-header bg-success">Registro de Oferentes</h2>
+                <div class="card-body">
 
-                <div class="card-body shadow-lg border-0">
-                    <form asp-action="CrearUsuario" method="post" asp-controller="Usuarios">
+                    <form asp-action="CrearUsuario">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group">
                             <label asp-for="IdUsuario" class="control-label"></label>
@@ -35,93 +40,66 @@
                             <input asp-for="SegundoApellido" class="form-control" />
                             <span asp-validation-for="SegundoApellido" class="text-danger"></span>
                         </div>
-
-
-
                         <div class="form-group">
                             <label asp-for="Correo" class="control-label"></label>
                             <input asp-for="Correo" class="form-control" />
                             <span asp-validation-for="Correo" class="text-danger"></span>
-
-
-                            <div class="form-group">
-                                <label asp-for="Clave" class="control-label"></label>
-                                <input asp-for="Clave" class="form-control" />
-                                <span asp-validation-for="Clave" class="text-danger"></span>
-                            </div>
                         </div>
-                        <select  name="IdRol">
-                            <option value="" selected disabled>Selecione un rol</option>
-                            @foreach (var rol in Model.Roles)
-                            
-                            {
-                                
-                            <option value="@rol.IdRol">@rol.RolNombre</option>
-                            
-                            }
-
-                        </select>
-
-                        <div class="row justify-content-center mt-2">
-
-                            <div class="col-12 col-md-6">
-
-
-                                <div class="form-group">
-                                    <input type="submit" value="Registrar" class="btn " />
-                                </div>
-
-                            </div>
-
-                            
-
+                        <div class="form-group">
+                            <label asp-for="Clave" class="control-label"></label>
+                            <input asp-for="Clave" class="form-control" />
+                            <span asp-validation-for="Clave" class="text-danger"></span>
                         </div>
-                        
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
                     </form>
 
 
                 </div>
 
+
             </div>
-          
+
         </div>
     </div>
 
-
-</div>
- 
-
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
-<style>
 
-    body{
-       
-          cursor:pointer;
-        background-color: #F8FAFC;
+@if ((Context.Session.GetString("Mensaje")) != null && (Context.Session.GetString("CodigoRespuesta") != null))
+{
+    var MensajeJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(Context.Session.GetString("Mensaje"));
 
         
+        int codigohhtp = Convert.ToInt32(Context.Session.GetString("CodigoRespuesta"));
 
 
+    <div class="row justify-content-center" style="margin-top:3%">
+        <div class="col col-md-6">
+           
+            <p><strong>@MensajeJson["mensaje"]</strong>
+             
+                @codigohhtp
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+}
+
+
+
+<style>
+
+
+    label {
+        color: black;
     }
-
-    .container {
-        margin-top: 6% !important
-    }
-
-
-    h2{
-        background-color: #002349 !important;
-    }
-    input[type="submit"]{
-        background-color: #002349;
-        color:white;
-    }
-
 </style>
+
+
+

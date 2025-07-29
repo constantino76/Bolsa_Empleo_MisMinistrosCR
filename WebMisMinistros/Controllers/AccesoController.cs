@@ -13,73 +13,74 @@ namespace WebMisMinistros.Controllers
         private readonly IUsuario _iusuario;
 
         private readonly ILogin _ilogin;
-        private readonly IJwtokenReader _jwtokenReader; 
+        private readonly IJwtokenReader _jwtokenReader;
         // GET: AccesoController
-        public AccesoController(IUsuario iusuario, ILogin ilogin, IJwtokenReader jwtokenReader) { 
-        
-        _iusuario = iusuario;
+        public AccesoController(IUsuario iusuario, ILogin ilogin, IJwtokenReader jwtokenReader)
+        {
+
+            _iusuario = iusuario;
 
             _ilogin = ilogin;
-            _jwtokenReader=jwtokenReader;   
+            _jwtokenReader = jwtokenReader;
 
 
         }
 
-
-
-       
-
-        public async Task<ActionResult> Login() {
+        public async Task<ActionResult> Login()
+        {
             return View();
-        
-        
+
         }
 
         // GET: AccesoController/Details/5
         [HttpPost]
-        public  async Task <ActionResult> Login(Login_ user)
+        public async Task<ActionResult> Login(Login_ user)
         {
             string Rol = "";
 
-            if (String.IsNullOrEmpty(user.Correo) ||String.IsNullOrEmpty(user.Clave)) {
+            if (String.IsNullOrEmpty(user.Correo) || String.IsNullOrEmpty(user.Clave))
+            {
 
 
                 return RedirectToAction("Login");
-            
+
             }
 
-            try {
+            try
+            {
                 // recibe el objeto token
-               var jwtk=await  _ilogin.Login(user);
-                if(jwtk!=null)
-               HttpContext.Session.SetString("jwtk", jwtk.token);
+                var jwtk = await _ilogin.Login(user);
+                if (jwtk != null)
+                    HttpContext.Session.SetString("jwtk", jwtk.token);
                 var jwtkdata = HttpContext.Session.GetString("jwtk");
 
-                if (jwtkdata!=null)
+                if (jwtkdata != null)
                 {
                     string rol = _jwtokenReader.LeerJwtoken(jwtkdata);
 
                     HttpContext.Session.SetString("rol", rol);
                 }
-              
 
 
-                }
-            
-             catch {
 
-               
             }
-        
+
+            catch
+            {
+
+
+            }
+
 
             return RedirectToAction("Dasboard", "Home");
         }
 
-       
-       
+
+
 
         // funcionalidad para cerrar sesion 
-        public IActionResult Logout() {
+        public IActionResult Logout()
+        {
 
 
             HttpContext.Session.Remove("jwtk");
@@ -88,40 +89,7 @@ namespace WebMisMinistros.Controllers
 
         }
 
-        // POST: AccesoController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: AccesoController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
 
-        // POST: AccesoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

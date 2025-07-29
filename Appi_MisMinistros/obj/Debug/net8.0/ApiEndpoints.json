@@ -121,7 +121,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nuevoregistro",
+        "Name": "usuario",
         "Type": "Appi_MisMinistros.Models.Usuario",
         "IsRequired": true
       }
