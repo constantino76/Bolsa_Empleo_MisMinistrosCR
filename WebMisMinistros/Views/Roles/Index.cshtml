@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebMisMinistros.Models.Rol>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de roles</h1>
+
+<p>
+    <a asp-action="Create">Agregar nuevo</a>
+</p>
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center ">
+
+        <div class="col-12  col-md-6">
+
+            <div class="card shadow-lg border-0" style="overflow:hidden">
+
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IdRol)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.RolNombre)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IdRol)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RolNombre)
+                                    </td>
+                                    <td class="d-flex gap-2 mt-2">
+                                        <a asp-action="Edit" asp-route-id="@item.IdRol" class="btn btn-small bg-warning"><i class="fa-solid fa-user-pen text-white"></i>Editar</a>
+                                        <a asp-action="MostrarDatosUsuario" asp-route-id="@item.IdRol" class="btn btn-small bg-primary"><i class="fa-regular fa-eye"></i>Ver</a>
+
+                                        <a asp-action="Delete" asp-route-id="@item.IdRol" class="btn btn-small bg-danger"><i class="fa-solid fa-trash"></i>Eliminar</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+

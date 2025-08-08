@@ -38,7 +38,7 @@ namespace WebMisMinistros.Repositorios.implementacion
                 {
                     var jsondata = await response.Content.ReadAsStringAsync();
                     var jsonobject = JsonConvert.DeserializeObject<JwTokenResponse>(jsondata);
-
+                   
                     if (jsonobject != null) return jsonobject;
 
                 }

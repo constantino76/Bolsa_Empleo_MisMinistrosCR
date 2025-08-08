@@ -5,12 +5,12 @@ namespace Appi_MisMinistros.Models
 {
     public class Rol
     {
-        [Key]
+        [Required]
         public int IdRol { get; set; }
-        [Display(Name = "Rol")]
+
 
         [Required]
         public string RolNombre { get; set; }
-        public ICollection<UsuarioRol> UsuarioRoles { get; set; }
+        public ICollection<UsuarioRol>? UsuarioRoles { get; set; }
     }
 }

@@ -29,6 +29,7 @@ namespace WebMisMinistros.Repositorios.implementacion
                
                 
                 url = "https://localhost:7178/api/Usuarios/registerUser/";
+
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await httpcliente.PostAsync(url, content);// obtenemos la respuesta 
 
@@ -122,7 +123,7 @@ namespace WebMisMinistros.Repositorios.implementacion
                     Console.WriteLine("Error 400, problemas en el modelo de datos :");
                     Console.WriteLine(respond.Mensaje);
 
-                    throw new Exception($"BadRequest: {respond.Mensaje}");
+                   // throw new Exception($"BadRequest: {respond.Mensaje}");
                 }
 
                 if (response.StatusCode == HttpStatusCode.Forbidden)

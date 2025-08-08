@@ -67,20 +67,40 @@ namespace Appi_MisMinistros.Controllers
                                         .Select(e => e.ErrorMessage)
                 });
             }
-            await _iusuario.InsertarUsuario(usuario);
-            return Ok(new
-            {
-                Mensaje = "Usuario registrado exitosamente.",
-                Usuario = new
-                {
-                    usuario.Nombre,
-                    usuario.PrimerApellido,
-                    usuario.SegundoApellido,
-                    usuario.Correo,
-                    // o cualquier otro campo relevante
-                }
-            });
+           int respuesta = await _iusuario.InsertarUsuario(usuario);
+            switch (respuesta) {
+                case 200:
 
+
+                    return Ok(new
+                    {
+                        Mensaje = "Usuario registrado exitosamente.",
+                        Usuario = new
+                        {
+                            usuario.Nombre,
+                            usuario.PrimerApellido,
+                            usuario.SegundoApellido,
+                            usuario.Correo,
+                            // o cualquier otro campo relevante
+                        }
+                    });
+
+                    break;
+                case 2627:
+                    return BadRequest(new
+                    {
+                        Mensaje="duplicado de llave foranea",
+                        Codigo=2627
+
+                    });
+                     
+
+                    break;
+
+
+            }
+
+            return Ok();
         } 
 
         // GET api/<UsuariosController>/5

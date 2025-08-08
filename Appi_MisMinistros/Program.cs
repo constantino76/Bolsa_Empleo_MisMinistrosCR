@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //inyeccion del servicio de Login
 builder.Services.AddScoped<Ilogin,LoginRepositorio>();
 builder.Services.AddScoped<IUsuario, UsuarioRepositorio>();
+builder.Services.AddScoped<IRol,RolRepositorio>();
 builder.Services.AddScoped<IjwToken,JwTokenRepositorio>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

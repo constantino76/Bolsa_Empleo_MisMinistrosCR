@@ -11,21 +11,24 @@ namespace Appi_MisMinistros.Repositorio.Implementacion
         public UsuarioRepositorio(AppDbContext context) {
             _context = context;   
         }
-        public async Task<bool> InsertarUsuario(Usuario user) {
+        public async Task<int> InsertarUsuario(Usuario user) {
             int filasafectadas = 0;
+           
             try
             {
                 await _context.Tb_Usuarios.AddAsync(user);
-               await _context.SaveChangesAsync();
-
-                return true;
+              filasafectadas = await _context.SaveChangesAsync();
+                if (filasafectadas>0) { return 200; }
+               
             }
 
             
             catch (DbUpdateException ex) {
 
                 Console.WriteLine("No se logro agregar el registro en la base de datos");
-                return false;
+                
+                return 2627;
+
             }
 
 
@@ -33,9 +36,9 @@ namespace Appi_MisMinistros.Repositorio.Implementacion
             {
                 Console.WriteLine("la ecepcion es", ex.ToString());
 
-
+               
             }
-            return true;
+            return 0;
 
             //if (filasafectadas == 0) return false;
 

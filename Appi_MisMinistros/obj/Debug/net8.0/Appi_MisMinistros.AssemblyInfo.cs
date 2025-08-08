@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Appi_MisMinistros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6323df24c468ad3736a470e1a93b4172aa64e5fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+342ee5fd748ff6d8f379280ab6ac529261bbd2a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Appi_MisMinistros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Appi_MisMinistros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

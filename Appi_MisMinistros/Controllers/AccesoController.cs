@@ -70,6 +70,7 @@ namespace Appi_MisMinistros.Controllers
                 {
                     usuario.IdUsuario,
                     usuario.Nombre,
+                    usuario.Correo,
                     rol_
                 }
             });

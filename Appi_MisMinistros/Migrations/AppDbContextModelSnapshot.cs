@@ -24,10 +24,7 @@ namespace Appi_MisMinistros.Migrations
             modelBuilder.Entity("Appi_MisMinistros.Models.Rol", b =>
                 {
                     b.Property<int>("IdRol")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdRol"));
 
                     b.Property<string>("RolNombre")
                         .IsRequired()
@@ -42,6 +39,9 @@ namespace Appi_MisMinistros.Migrations
                 {
                     b.Property<string>("IdUsuario")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("CambiarClave")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Clave")
                         .IsRequired()

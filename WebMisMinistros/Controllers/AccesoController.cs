@@ -26,9 +26,9 @@ namespace WebMisMinistros.Controllers
 
         }
 
-        public async Task<ActionResult> Login()
+        public ActionResult Login()
         {
-            return View();
+            return  View();
 
         }
 
@@ -36,7 +36,7 @@ namespace WebMisMinistros.Controllers
         [HttpPost]
         public async Task<ActionResult> Login(Login_ user)
         {
-            string Rol = "";
+          
 
             if (String.IsNullOrEmpty(user.Correo) || String.IsNullOrEmpty(user.Clave))
             {
@@ -59,6 +59,7 @@ namespace WebMisMinistros.Controllers
                     string rol = _jwtokenReader.LeerJwtoken(jwtkdata);
 
                     HttpContext.Session.SetString("rol", rol);
+                    HttpContext.Session.SetString("email",user.Correo);// hacems esto asumiendo que la funcion Login fue exitosa, 
                 }
 
 

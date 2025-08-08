@@ -16,6 +16,7 @@ namespace Appi_MisMinistros.Models
         public string SegundoApellido { get; set; }
         public string Correo { get; set; }
         public string Clave { get; set; }
+        public bool CambiarClave { get; set; }
         public ICollection<UsuarioRol>? UsuarioRoles { get; set; }
 
 

@@ -3,12 +3,12 @@
     "Name": "Nuevo perfil",
     "Projects": [
       {
-        "Name": "WebMisMinistros\\WebMisMinistros.csproj",
+        "Name": "Appi_MisMinistros\\Appi_MisMinistros.csproj",
         "Action": "Start",
         "DebugTarget": "https"
       },
       {
-        "Name": "Appi_MisMinistros\\Appi_MisMinistros.csproj",
+        "Name": "WebMisMinistros\\WebMisMinistros.csproj",
         "Action": "Start",
         "DebugTarget": "https"
       }

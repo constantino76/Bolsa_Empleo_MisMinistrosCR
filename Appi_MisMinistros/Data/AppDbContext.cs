@@ -14,6 +14,13 @@ namespace Appi_MisMinistros.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Rol>(entity => {
+
+                entity.HasKey(col => col.IdRol);
+                entity.Property(col => col.IdRol).ValueGeneratedNever();
+            
+            });
+
             // Configurar UsuarioRol con clave compuesta y relaciones
             modelBuilder.Entity<UsuarioRol>(entity =>
             {

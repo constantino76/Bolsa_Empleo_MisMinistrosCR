@@ -1,4 +1,4 @@
-﻿@using Newtonsoft.Json
+﻿﻿@using Newtonsoft.Json
 @model WebMisMinistros.Models.ViewModel.UsuarioViewModel
 
 @{
@@ -15,7 +15,7 @@
     <div class="row justify-content-center mt-2">
         <div class="col col-md-6">
             <div class="card shadow-lg border-0">
-                <h2 class="card-header bg-success">Registro de Oferentes</h2>
+                <h2 class="card-header text-white" style="background-color:#002349">Registro de Oferentes</h2>
                 <div class="card-body">
 
                     <form asp-action="CrearUsuario">
@@ -42,12 +42,12 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="Correo" class="control-label"></label>
-                            <input asp-for="Correo" class="form-control" />
+                            <input asp-for="Correo" class="form-control" type="text"/>
                             <span asp-validation-for="Correo" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Clave" class="control-label"></label>
-                            <input asp-for="Clave" class="form-control" />
+                            <input asp-for="Clave" autocomplete="off" class="form-control" />
                             <span asp-validation-for="Clave" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -71,15 +71,16 @@
 {
     var MensajeJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(Context.Session.GetString("Mensaje"));
 
-        
-        int codigohhtp = Convert.ToInt32(Context.Session.GetString("CodigoRespuesta"));
+
+    int codigohhtp = Convert.ToInt32(Context.Session.GetString("CodigoRespuesta"));
 
 
     <div class="row justify-content-center" style="margin-top:3%">
         <div class="col col-md-6">
-           
-            <p><strong>@MensajeJson["mensaje"]</strong>
-             
+
+            <p>
+                <strong>@MensajeJson["mensaje"]</strong>
+
                 @codigohhtp
             </p>
 
@@ -95,11 +96,13 @@
 
 <style>
 
+input[type="text"]{
+ color:red;
+ border:2px solid cyan
+ 
 
+}
     label {
         color: black;
     }
 </style>
-
-
-

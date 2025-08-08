@@ -12,10 +12,12 @@ namespace WebMisMinistros.Controllers
     {
         private readonly ILogger<UsuariosController> _logger;
         private readonly IUsuario _iusuario;
-        public UsuariosController(ILogger<UsuariosController> logger, IUsuario iusuario)
+        private readonly IRol _rolservice;
+        public UsuariosController(ILogger<UsuariosController> logger, IUsuario iusuario,IRol rolservice)
         {
             _logger = logger;
             _iusuario = iusuario;
+            _rolservice = rolservice;
         }
 
         public IActionResult Index()
@@ -24,32 +26,24 @@ namespace WebMisMinistros.Controllers
             return View();
 
         }
+        
         public async Task<IActionResult> CrearUsuario()
         {
 
             UsuarioViewModel user = new UsuarioViewModel()
             {
 
-                Roles = GetRoles()
+                Roles = await _rolservice.getRoles()// llamada del metodo del servicio para  obtener los roles
 
             };
             //user.Roles=GetRoles();
             return View(user);
 
         }
-        public List<Rol> GetRoles()
-        {
-
-            List<Rol> roles = new List<Rol>();
-
-            roles.Add(new Rol() { IdRol = 1, RolNombre = "Administrador" });
-
-            roles.Add(new Rol() { IdRol = 2, RolNombre = "Developer" });
-            return roles;
-        }
+       
 
         [HttpPost]
-        public async Task<IActionResult> CrearUsuario([FromBody] UsuarioViewModel usuarioviewmodel, int IdRol)
+        public async Task<IActionResult> CrearUsuario(UsuarioViewModel usuarioviewmodel,int idRol)
         {
 
             string token = HttpContext.Session.GetString("jwtk");
@@ -58,7 +52,7 @@ namespace WebMisMinistros.Controllers
             {
 
 
-                return RedirectToAction("index");
+                return RedirectToAction("index","Usuarios");
 
 
             }
@@ -74,7 +68,8 @@ namespace WebMisMinistros.Controllers
                     PrimerApellido = usuarioviewmodel.PrimerApellido,
                     SegundoApellido = usuarioviewmodel.SegundoApellido,
                     Correo = usuarioviewmodel.Correo,
-                    Clave = usuarioviewmodel.Clave
+                    Clave = usuarioviewmodel.Clave,
+                    CambiarClave=true
 
                 };
 
@@ -84,6 +79,18 @@ namespace WebMisMinistros.Controllers
 
                 HttpContext.Session.SetString("Mensaje",respuesta.Mensaje);
                 HttpContext.Session.SetString("CodigoRespuesta", Convert.ToString(respuesta.CodigoRespuesta));
+                switch (respuesta.CodigoRespuesta) {
+
+                    case 200:
+                        HttpContext.Session.SetString("class-boostrap", "bg-success");
+                break;
+                    case 400:
+                        HttpContext.Session.SetString("class-boostrap", "bg-danger");
+                        break;
+
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -123,7 +130,17 @@ namespace WebMisMinistros.Controllers
         var respuesta= await _iusuario.CrearNuevoUsuario(user);
 
 
-          
+            switch (respuesta.CodigoRespuesta)
+            {
+
+                case 200:
+                    HttpContext.Session.SetString("class-boostrap", "bg-success");
+                    break;
+                case 400:
+                    HttpContext.Session.SetString("class-boostrap", "alert alert-danger");
+                    break;
+
+            }
 
             HttpContext.Session.SetString("Mensaje", respuesta.Mensaje);
             HttpContext.Session.SetString("CodigoRespuesta", Convert.ToString(respuesta.CodigoRespuesta));

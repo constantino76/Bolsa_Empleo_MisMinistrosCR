@@ -16,6 +16,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Appi_MisMinistros.Controllers.RolesController",
+    "Method": "CrearRol",
+    "RelativePath": "api/Roles/CrearRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rol",
+        "Type": "Appi_MisMinistros.Models.Rol",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Appi_MisMinistros.Controllers.RolesController",
+    "Method": "getRoles",
+    "RelativePath": "api/Roles/getRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Appi_MisMinistros.Models.Rol, Appi_MisMinistros, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Appi_MisMinistros.Controllers.UsuariosController",
     "Method": "Post",
     "RelativePath": "api/Usuarios",

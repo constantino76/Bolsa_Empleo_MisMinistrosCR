@@ -4,6 +4,6 @@ namespace Appi_MisMinistros.Repositorio.Interfaces
 {
     public interface IUsuario
     {
-        public Task<bool> InsertarUsuario(Usuario usuario);
+        public Task<int> InsertarUsuario(Usuario usuario);
     }
 }

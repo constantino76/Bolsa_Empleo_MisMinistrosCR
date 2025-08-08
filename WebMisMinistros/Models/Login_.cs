@@ -1,7 +1,12 @@
-﻿namespace WebMisMinistros.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebMisMinistros.Models
 {
     public class Login_
-    {  public string Correo { get; set; }
+    {
+        [Required(ErrorMessage = "Campo obligatorio")]
+        public string Correo { get; set; }
+        [Required(ErrorMessage = "Campo obligatorio")   ]
         public string Clave { get; set; }
     }
 }

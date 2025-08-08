@@ -5,11 +5,13 @@ namespace WebMisMinistros.Models
     public class Rol
     {
         [Key]
+        [Required(ErrorMessage ="Debe proporcionar un Id")]
+        [Display(Name = "Rol")]
         public int IdRol { get; set; }
-        [Display(Name ="Rol")]
         
-        [Required]
+        
+        [Required (ErrorMessage ="Este campo es requerido")]
         public string RolNombre { get; set; }
-        public ICollection<UsuarioRol> UsuarioRoles { get; set; }
+        public ICollection<UsuarioRol>? UsuarioRoles { get; set; }
     }
 }
